@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-purple-400 pb-1">Portfolio</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white border-transparent hover:border-purple-400 transition duration-300">Home</a>
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white border-transparent hover:border-purple-400 transition duration-300">About</a>
+                        <a href="#skills" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white border-transparent hover:border-purple-400 transition duration-300">Skills</a>
+                        <a href="#projects" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white border-transparent hover:border-purple-400 transition duration-300">Projects</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white border-transparent hover:border-purple-400 transition duration-300">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none transition duration-300">
+                        <svg id="mobile-menu-icon" class="h-6 w-6 transition-transform duration-300 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-800 origin-top transform transition-all duration-300 ease-in-out scale-y-0">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 border-l-4 border-transparent hover:border-purple-400 transition duration-300">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 border-l-4 border-transparent hover:border-purple-400 transition duration-300">About</a>
+                <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 border-l-4 border-transparent hover:border-purple-400 transition duration-300">Skills</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 border-l-4 border-transparent hover:border-purple-400 transition duration-300">Projects</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 border-l-4 border-transparent hover:border-purple-400 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 bg-gradient-to-b from-gray-800 to-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Foto dipindahkan ke atas untuk mobile -->
+                <div class="w-full md:w-1/2 flex justify-center order-1 md:order-2 mb-10 md:mb-0 animate-on-scroll">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500 glow-animation">
+                        <img src="./images/sapiens (1).svg" 
+                             alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- Teks dipindahkan ke bawah untuk mobile -->
+                <div class="w-full md:w-1/2 order-2 md:order-1 animate-on-scroll">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-purple-400">Raoul Van Abdullah</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-300">Frontend Developer</h2>
+                    <p class="text-lg mb-8 text-gray-300 max-w-lg">I create beautiful, responsive websites with modern technologies and best practices.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-md font-medium transition duration-300 pulse-animation">Contact Me</a>
+                        <a href="#projects" class="px-6 py-3 border border-purple-400 text-purple-400 hover:bg-purple-900 rounded-md font-medium transition duration-300">View Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center animate-on-scroll">About <span class="text-purple-400">Me</span></h2>
+            <div class="md:flex items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center animate-on-scroll">
+                    <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-purple-500 glow-animation">
+                        <img src="./images/sapiens (1).svg" 
+                             alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12 animate-on-scroll">
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="text-lg mb-6 text-gray-300">
+                        I'm a passionate frontend developer with 5 years of experience creating modern web applications. 
+                        I specialize in React, Vue.js, and responsive design. My goal is to build intuitive, 
+                        user-friendly interfaces that provide exceptional user experiences.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-medium mb-2 text-purple-400">Personal Info</h4>
+                            <ul class="space-y-2">
+                                <li><span class="font-medium">Name:</span> Raoul Van Abdullah</li>
+                                <li><span class="font-medium">Email:</span> raoul.van@example.com</li>
+                                <li><span class="font-medium">Phone:</span> +62 123 4567 8910</li>
+                                <li><span class="font-medium">Freelance:</span> Available</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-medium mb-2 text-purple-400">Experience</h4>
+                            <ul class="space-y-2">
+                                <li><span class="font-medium">5+ Years</span> as Frontend Developer</li>
+                                <li><span class="font-medium">50+ Projects</span> Completed</li>
+                                <li><span class="font-medium">10+ Clients</span> Worldwide</li>
+                                <li><span class="font-medium">3 Years</span> React Experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="./images/Contoh-CV-lamaran-Simple-Menarik.png" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-md font-medium transition duration-300 inline-flex items-center">
+                            Download CV <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center animate-on-scroll">My <span class="text-purple-400">Skills</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Technical Skills -->
+                <div class="animate-on-scroll">
+                    <h3 class="text-2xl font-semibold mb-6 text-purple-400">Technical Skills</h3>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-1">
+                            <span>HTML/CSS</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="--skill-level: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-1">
+                            <span>JavaScript</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="--skill-level: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-1">
+                            <span>React</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="--skill-level: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-1">
+                            <span>Vue.js</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="--skill-level: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Professional Skills -->
+                <div class="animate-on-scroll">
+                    <h3 class="text-2xl font-semibold mb-6 text-purple-400">Professional Skills</h3>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-1">
+                            <span>Communication</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="--skill-level: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-1">
+                            <span>Team Work</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="--skill-level: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-1">
+                            <span>Project Management</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="--skill-level: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-1">
+                            <span>Creativity</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="--skill-level: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4 text-center animate-on-scroll">My <span class="text-purple-400">Projects</span></h2>
+            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto animate-on-scroll">Here are some of my recent projects. Each project was carefully crafted to meet client requirements and deliver exceptional user experiences.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-lg overflow-hidden shadow-lg animate-on-scroll">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Project 1" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <span class="px-2 py-1 bg-purple-600 text-white rounded text-xs">Featured</span>
+                        </div>
+                    </div>
+                    <div class="p-6 project-content">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Website</h3>
+                        <p class="text-gray-300 mb-4">A fully responsive e-commerce platform built with React and Node.js.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">MongoDB</span>
+                        </div>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center group">
+                            View Project <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card rounded-lg overflow-hidden shadow-lg animate-on-scroll" style="transition-delay: 0.1s">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                             alt="Project 2" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
+                    </div>
+                    <div class="p-6 project-content">
+                        <h3 class="text-xl font-bold mb-2">Portfolio Template</h3>
+                        <p class="text-gray-300 mb-4">A modern portfolio template for creative professionals.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">HTML/CSS</span>
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">JavaScript</span>
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">GSAP</span>
+                        </div>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center group">
+                            View Project <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card rounded-lg overflow-hidden shadow-lg animate-on-scroll" style="transition-delay: 0.2s">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555421689-3f034debb7a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Project 3" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <span class="px-2 py-1 bg-purple-600 text-white rounded text-xs">New</span>
+                        </div>
+                    </div>
+                    <div class="p-6 project-content">
+                        <h3 class="text-xl font-bold mb-2">Task Management App</h3>
+                        <p class="text-gray-300 mb-4">A productivity app for managing tasks and projects with team collaboration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">Vue.js</span>
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">Firebase</span>
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">Tailwind CSS</span>
+                        </div>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center group">
+                            View Project <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card rounded-lg overflow-hidden shadow-lg animate-on-scroll" style="transition-delay: 0.3s">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1604964432806-254d07c11f32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" 
+                             alt="Project 4" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
+                    </div>
+                    <div class="p-6 project-content">
+                        <h3 class="text-xl font-bold mb-2">Weather Dashboard</h3>
+                        <p class="text-gray-300 mb-4">A real-time weather application with 5-day forecast and location search.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">API</span>
+                            <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">Chart.js</span>
+                        </div>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 font-medium inline-flex items-center group">
+                            View Project <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="#" class="px-6 py-3 border border-purple-400 text-purple-400 hover:bg-purple-900 rounded-md font-medium transition duration-300 inline-flex items-center group">
+                    View All Projects <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4 text-center animate-on-scroll">Get In <span class="text-purple-400">Touch</span></h2>
+            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto animate-on-scroll">Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="animate-on-scroll">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-300 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-md font-medium transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="space-y-8 animate-on-scroll">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-400">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-map-marker-alt text-purple-400"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-gray-300">Jakarta, Indonesia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-envelope text-purple-400"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-gray-300">raoul.van@example.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-phone-alt text-purple-400"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-gray-300">+62 123 4567 8910</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-400">Follow Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/VanzzCoding567" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-400">Availability</h3>
+                        <p class="text-gray-300">I'm currently available for freelance work. If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then get in touch.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="animate-on-scroll">
+                    <h3 class="text-xl font-bold mb-4 text-purple-400">Portfolio</h3>
+                    <p class="text-gray-300 mb-4">This portfolio showcases selected works that demonstrate my growth and expertise as a Frontend Developer. You'll find projects highlighting technical proficiency, creative problem-solving, and user-centric design approaches. Each case study includes the development process, technologies implemented, and measurable value delivered to clients."</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services Offered -->
+                <div class="animate-on-scroll">
+                    <h3 class="text-xl font-bold mb-4 text-purple-400">Services Offered</h3>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="service-card p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 text-purple-400 mr-4">
+                                    <i class="fas fa-laptop-code text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Web Development</h4>
+                                    <p class="text-sm text-gray-400">Custom websites and web applications</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-card p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 text-purple-400 mr-4">
+                                    <i class="fas fa-mobile-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Responsive Design</h4>
+                                    <p class="text-sm text-gray-400">Mobile-friendly interfaces</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-card p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 text-purple-400 mr-4">
+                                    <i class="fas fa-paint-brush text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">UI/UX Design</h4>
+                                    <p class="text-sm text-gray-400">Beautiful and intuitive interfaces</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <h3 class="text-xl font-bold mb-4 text-purple-400">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe to my newsletter to get updates about my latest projects and articles.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-700 text-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-purple-500 w-full">
+                        <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded-r-md hover:bg-purple-700 transition duration-300">
+                            <i class="fas fa-p paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center animate-on-scroll">
+                <p class="text-gray-400">&copy; 2025 Made From ❤️ By Raoul . All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Style Web -->
+     <style>
+        .skill-bar {
+            width: 100%;
+            background-color: #2d3748;
+            border-radius: 20px;
+            margin: 10px 0;
+        }
+        
+        .skill-level {
+            height: 10px;
+            border-radius: 20px;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            position: relative;
+            animation: fillAnimation 2s ease-out forwards;
+        }
+        
+        @keyframes fillAnimation {
+            from { width: 0%; }
+            to { width: var(--skill-level); }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #7c3aed;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile Nav Link with Border Bottom */
+        .mobile-nav-link {
+            position: relative;
+            padding-bottom: 8px;
+            margin-bottom: 4px;
+        }
+        
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #7c3aed;
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Enhanced Project Card Animation */
+        .project-card {
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(124, 58, 237, 0.1));
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.1), transparent);
+            transition: 0.6s;
+        }
+        
+        .project-card:hover::before {
+            left: 100%;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.3);
+            border-color: rgba(124, 58, 237, 0.4);
+        }
+        
+        .project-card img {
+            transition: transform 0.5s ease;
+        }
+        
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .project-card .project-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Scroll Animation */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Service Card */
+        .service-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(124, 58, 237, 0.1));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.2);
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(124, 58, 237, 0.2));
+        }
+        
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Glow Effect */
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px rgba(124, 58, 237, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.8); }
+            100% { box-shadow: 0 0 5px rgba(124, 58, 237, 0.5); }
+        }
+        
+        .glow-animation {
+            animation: glow 3s infinite;
+        }
+        
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transform-origin: top;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        #mobile-menu.show {
+            transform: scaleY(1);
+        }
+        
+        /* Hamburger to X Animation */
+        #mobile-menu-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        #mobile-menu-icon.rotate {
+            transform: rotate(90deg);
+        }
+    </style>
+
+    <script>
+        // Mobile menu toggle with animation
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('show');
+            mobileMenuIcon.classList.toggle('rotate');
+            
+            // Add border bottom to mobile menu links when menu is open
+            if (mobileMenu.classList.contains('show')) {
+                document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                    link.style.borderBottom = '1px solid rgba(124, 58, 237, 0.2)';
+                });
+            } else {
+                document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                    link.style.borderBottom = 'none';
+                });
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu.classList.contains('show')) {
+                        mobileMenu.classList.remove('show');
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuIcon.classList.remove('rotate');
+                    }
+                }
+            });
+        });
+        
+        // Animate skill bars when they come into view
+        const skillBars = document.querySelectorAll('.skill-level');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        skillBars.forEach(bar => {
+            bar.style.animationPlayState = 'paused';
+            observer.observe(bar);
+        });
+
+        // Scroll animation for elements
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        
+        const elementObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animateElements.forEach(element => {
+            elementObserver.observe(element);
+        });
+
+        // Add staggered delay for project cards
+        document.querySelectorAll('.project-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>
